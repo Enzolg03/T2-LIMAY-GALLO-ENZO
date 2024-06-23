@@ -14,7 +14,7 @@ export class Pre02Component {
     let pre = Number(precio.value)
     let cant = Number(cantidad.value)
     let total =  pre * cant;
-    if(cant < 20){
+    if(cant > 20){
       total = total - (total* 0.1)
     }else
         if(cant >= 10){
