@@ -9,5 +9,13 @@ import { MaterialModule } from '../../angular-material/material/material.module'
   styleUrl: './pre04.component.css'
 })
 export class Pre04Component {
-  
+  total : number;
+  calcularTotal(precio: HTMLInputElement){
+    let pre = Number(precio.value)
+    if(pre > 200){
+      this.total = pre - (pre* 0.2)
+    }else{
+      this.total = pre
+    }
+  }
 }
